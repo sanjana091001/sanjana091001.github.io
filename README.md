@@ -8,9 +8,9 @@
 4. Kafka on the Shore by Haruki Murakami
 
 ## **My experience doing the tasks:**
-### I am so glad I decided to sign-up for doing the FOSS tasks. I have learnt so much in such a short period of time and I enjoyed doing the tasks.
-### I'm also grateful to all my mentors and other seniors who helped me with the tasks (even if I asked a doubt at 2.00AM).
+### I am so glad I decided to sign-up for doing the FOSS tasks. I have learnt so much in such a short period of time and I enjoyed doing them.
+### I'm also grateful to all my mentors and other seniors who helped me with the tasks.
 ## **Links:**
-[GitHub:](www.github/sanjana091001)
-[Instagram:](www.instagram.com/saaanjaaana)
+###[GitHub](www.github/sanjana091001)
+###[Instagram](www.instagram.com/saaanjaaana)
 
