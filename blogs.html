@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjana Nayar | Knowledge Modules</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .module-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .module-id {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-base);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .module-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .module-card:hover .module-title {
+            color: var(--accent-base);
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+    <div class="ambient-glow"></div>
+
+    <header>
+        <a href="home.html" class="logo">SANJANA.<span>DEV</span></a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blogs.html" class="active">Blogs</a></li>
+                <li><a href="non-tech.html">Non-Tech</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="page-header">
+            <span class="page-mono-subtitle">// DATA.MODULES</span>
+            <h1 class="page-title">Technical Transmissions.</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; font-size: 1.1rem;">
+                Architectural deep dives, research notes, and engineering paradigms.
+            </p>
+        </div>
+
+        <div class="module-grid">
+            
+            <a href="#" class="bento-item module-card">
+                <div class="module-id">
+                    <span>MOD_001</span>
+                    <span style="color: var(--text-secondary);">03.15.2024</span>
+                </div>
+                <h3 class="module-title">Understanding React Server Components</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    A deep dive into how RSCs change the way we build React applications, and why they matter for performance and bundle sizes.
+                </p>
+            </a>
+
+            <a href="#" class="bento-item module-card">
+                <div class="module-id">
+                    <span>MOD_002</span>
+                    <span style="color: var(--text-secondary);">02.02.2024</span>
+                </div>
+                <h3 class="module-title">Building a High-Perf CLI with Go</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    Step-by-step guide to writing a robust, cross-platform command-line interface using Go and the Cobra framework.
+                </p>
+            </a>
+
+            <a href="#" class="bento-item module-card">
+                <div class="module-id">
+                    <span>MOD_003</span>
+                    <span style="color: var(--text-secondary);">12.10.2023</span>
+                </div>
+                <h3 class="module-title">Minimalist Terminal Architecture</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    Sharing my zsh, tmux, and neovim configuration for maximum engineering productivity without the bloat.
+                </p>
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-light); font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+        SYSTEM BUILD: v2.0 <br>
+        &copy; <span id="year"></span> Sanjana Nayar Process Executed.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

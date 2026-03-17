@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjana Nayar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            overflow: hidden; /* Prevent scrolling on welcome screen */
+        }
+        .welcome-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        .welcome-name {
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-base) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.04em;
+            cursor: pointer;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+            position: relative;
+        }
+        .welcome-name:hover {
+            transform: scale(1.03);
+            filter: drop-shadow(0 0 20px rgba(0, 255, 204, 0.4));
+        }
+        .welcome-hint {
+            margin-top: 2.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            animation: pulse-hint 2.5s infinite alternate;
+        }
+        @keyframes pulse-hint {
+            from { opacity: 0.2; }
+            to { opacity: 0.8; }
+        }
+        /* Click ripple effect container */
+        .ripple-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--bg-dark);
+            z-index: 1000;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+    <div class="ambient-glow"></div>
+
+    <div class="welcome-container" onclick="enterSite()">
+        <div class="welcome-name">Sanjana Nayar</div>
+        <div class="welcome-hint">Click To Initialize</div>
+    </div>
+
+    <!-- Black flash overlay when clicking to enter -->
+    <div class="ripple-overlay" id="ripple"></div>
+
+    <script src="script.js"></script>
+    <script>
+        function enterSite() {
+            const ripple = document.getElementById('ripple');
+            ripple.style.opacity = '1';
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 600);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjana Nayar | Experience Log</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-base) 0%, rgba(255,255,255,0.05) 100%);
+            z-index: 0;
+        }
+
+        .timeline-node {
+            display: flex;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .node-marker {
+            min-width: 42px;
+            height: 42px;
+            background: var(--bg-dark);
+            border: 2px solid var(--accent-base);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px var(--accent-glow);
+            transition: var(--transition-smooth);
+        }
+
+        .node-marker::inner {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--accent-base);
+            border-radius: 50%;
+        }
+
+        .timeline-node:hover .node-marker {
+            transform: scale(1.1);
+            background: var(--accent-glow);
+        }
+
+        .node-content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+    <div class="ambient-glow"></div>
+
+    <header>
+        <a href="home.html" class="logo">SANJANA.<span>DEV</span></a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiences.html" class="active">Experiences</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="non-tech.html">Non-Tech</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="page-header">
+            <span class="page-mono-subtitle">// EXECUTION.LOG</span>
+            <h1 class="page-title">Experience Log.</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; font-size: 1.1rem;">
+                A chronological record of system deployments, architectural migrations, and engineering roles.
+            </p>
+        </div>
+
+        <div class="timeline-container">
+            
+            <div class="timeline-node">
+                <div class="node-marker"><div style="width: 12px; height: 12px; background: var(--accent-base); border-radius: 50%;"></div></div>
+                <div class="node-content bento-item">
+                    <div class="log-meta">
+                        <span class="log-date">[Jul 2023 - PRESENT]</span>
+                        <span class="tech-tag"><span></span>Active Thread</span>
+                    </div>
+                    <h3 class="log-role">Test Engineer 2 <span class="log-company">@ HPE (Juniper Networks, MIST AI)</span></h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">
+                        Worked on Mist Cloud QA team focusing on UI/API testing and automation. Identify and report bugs, perform root cause analysis, create and maintain automation test plans, and set up testbeds for various scenarios.
+                    </p>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Postman</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-node">
+                <div class="node-marker"><div style="width: 12px; height: 12px; background: rgba(255,255,255,0.2); border-radius: 50%;"></div></div>
+                <div class="node-content bento-item">
+                    <div class="log-meta">
+                        <span class="log-date" style="color: var(--text-secondary);">[Jan 2023 - Jun 2023]</span>
+                    </div>
+                    <h3 class="log-role">Software Engineer Intern <span class="log-company">@ Juniper Networks</span></h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">
+                        Contributed to disaster recovery automation and service backup processes, ensuring high availability and system resilience.
+                    </p>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">AWS (S3)</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Linux / Bash</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-light); font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+        SYSTEM BUILD: v3.0 <br>
+        &copy; <span id="year"></span> Sanjana Nayar Process Executed.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

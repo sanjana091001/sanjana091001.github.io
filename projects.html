@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjana Nayar | Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .project-links a {
+            color: var(--text-secondary);
+            margin-left: 0.5rem;
+            transition: color 0.3s;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .project-links a:hover {
+            color: var(--accent-base);
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-footer {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+    <div class="ambient-glow"></div>
+
+    <header>
+        <a href="home.html" class="logo">SANJANA.<span>DEV</span></a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="non-tech.html">Non-Tech</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="page-header">
+            <span class="page-mono-subtitle">// DEV.WORKSPACE</span>
+            <h1 class="page-title">Projects Hub.</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; font-size: 1.1rem;">
+                Academic research, AI models, and classification projects.
+            </p>
+        </div>
+
+        <div class="project-grid bento-grid" style="display: flex; flex-wrap: wrap;">
+            
+            <div class="bento-item project-card" style="flex: 1 1 300px;">
+                <div>
+                    <div class="project-header">
+                        <h3 class="project-title">Cervical Cancer Classification</h3>
+                    </div>
+                    <p class="project-desc">
+                        Built a Convolutional Neural Network (CNN) based model for multi-class pap smear classification. Achieved significantly improved accuracy levels leveraging data augmentation techniques.
+                    </p>
+                </div>
+                <div class="project-footer">
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">CNNs</span>
+                    <span class="tech-tag">Data Augmentation</span>
+                </div>
+            </div>
+
+            <div class="bento-item project-card" style="flex: 1 1 300px;">
+                <div>
+                    <div class="project-header">
+                        <h3 class="project-title">Pest Classification</h3>
+                    </div>
+                    <p class="project-desc">
+                        Conducted a comprehensive comparative study of deep learning architectures on Kaggle datasets for the automated classification of agricultural pests.
+                    </p>
+                </div>
+                <div class="project-footer">
+                    <span class="tech-tag">AI / ML</span>
+                    <span class="tech-tag">Kaggle</span>
+                    <span class="tech-tag">Architecture Study</span>
+                </div>
+            </div>
+
+            <div class="bento-item project-card" style="flex: 1 1 300px; box-shadow: 0 0 20px rgba(0, 255, 204, 0.05); border-color: rgba(0, 255, 204, 0.3);">
+                <div>
+                    <div class="project-header">
+                        <h3 class="project-title" style="color: var(--accent-base);">Face Mask Detection</h3>
+                    </div>
+                    <p class="project-desc">
+                        Developed and trained an efficient Convolutional Neural Network (CNN) specifically tailored for computer vision image classification to detect face masks during the pandemic.
+                    </p>
+                </div>
+                <div class="project-footer">
+                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-light); font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+        SYSTEM BUILD: v3.0 <br>
+        &copy; <span id="year"></span> Sanjana Nayar Process Executed.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

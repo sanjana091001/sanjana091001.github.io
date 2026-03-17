@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjana Nayar | Auxiliary</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .photo-card {
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            position: relative;
+            background: rgba(18,18,18,0.8);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+
+        .photo-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-secondary);
+            box-shadow: 0 10px 30px rgba(112, 0, 255, 0.2);
+        }
+
+        .photo-card:hover::after {
+            opacity: 0.8;
+        }
+
+        .photo-icon {
+            font-size: 3rem;
+            z-index: 2;
+            filter: grayscale(100%) brightness(200%);
+            transition: filter 0.3s ease;
+        }
+        
+        .photo-card:hover .photo-icon {
+            filter: grayscale(0%);
+        }
+
+        .photo-label {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            z-index: 3;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: #fff;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .photo-card:hover .photo-label {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+    <div class="ambient-glow"></div>
+
+    <header>
+        <a href="home.html" class="logo">SANJANA.<span>DEV</span></a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="non-tech.html" class="active">Non-Tech</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="page-header">
+            <span class="page-mono-subtitle">// OFFLINE.PROCESSES</span>
+            <h1 class="page-title">Auxiliary Functions.</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; font-size: 1.1rem;">
+                Subroutines executed outside of the development environment.
+            </p>
+        </div>
+
+        <div class="photo-grid">
+            
+            <div class="photo-card bento-item" style="background: radial-gradient(circle at center, #2a2a2a, #111);">
+                <div class="photo-icon">🏔️</div>
+                <div class="photo-label">Alpine_Hike.obj</div>
+            </div>
+
+            <div class="photo-card bento-item" style="background: radial-gradient(circle at center, #2e2a36, #111);">
+                <div class="photo-icon">📸</div>
+                <div class="photo-label">Street_Lens.RAW</div>
+            </div>
+
+            <div class="photo-card bento-item" style="background: radial-gradient(circle at center, #36322a, #111);">
+                <div class="photo-icon">☕</div>
+                <div class="photo-label">Caffeine_Intake.sh</div>
+            </div>
+
+            <div class="photo-card bento-item" style="background: radial-gradient(circle at center, #2a3636, #111);">
+                <div class="photo-icon">📚</div>
+                <div class="photo-label">SciFi_Archive.epub</div>
+            </div>
+
+        </div>
+
+        <div class="bento-item" style="margin-top: 4rem; text-align: center; border-color: var(--accent-secondary);">
+            <p style="font-family: var(--font-mono); color: var(--accent-base);">
+                > _ Maintaining balance minimizes system degradation.
+            </p>
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-light); font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+        SYSTEM BUILD: v2.0 <br>
+        &copy; <span id="year"></span> Sanjana Nayar Process Executed.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

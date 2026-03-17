@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjana Nayar | Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="home.html" class="logo">SANJANA.<span>DEV</span></a>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="non-tech.html">Non-Tech</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-header">
+            <span class="page-mono-subtitle">// SYSTEM.INITIALIZE</span>
+            <h1 class="page-title">Sanjana Nayar.</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; font-size: 1.1rem;">
+                SWE in QA | AI Enthusiast | Published AI and ML Reasearched
+            </p>
+        </div>
+
+        <!-- Bento Grid System -->
+        <div class="bento-grid">
+            
+            <!-- Hero Card -->
+            <div class="bento-item col-span-8 row-span-2">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Machine Learning & Automation</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                    I specialize in building and classifying AI models, synthetic data generation, and computer vision architectures. Currently ensuring quality and system resilience at Mist Cloud AI (HPE/Juniper Networks) via automation testing, APIs, and root cause analysis.
+                </p>
+                <a href="experiences.html" class="btn-tech">Access Logs -></a>
+            </div>
+            
+            <!-- Tech Stack Card -->
+            <div class="bento-item col-span-4 row-span-2" style="display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 0.9rem; text-transform: uppercase;">Core Subsystems</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                    <div class="tech-tag"><span></span>Python</div>
+                    <div class="tech-tag"><span></span>TensorFlow</div>
+                    <div class="tech-tag"><span></span>PyTorch</div>
+                    <div class="tech-tag"><span></span>Kubernetes</div>
+                    <div class="tech-tag"><span></span>Kafka</div>
+                    <div class="tech-tag"><span></span>Selenium</div>
+                    <div class="tech-tag"><span></span>C++</div>
+                </div>
+            </div>
+
+            <!-- Focus Area Card -->
+            <div class="bento-item col-span-4" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-base);">✦</div>
+                <h3 style="font-size: 1.2rem;">Computer Vision</h3>
+            </div>
+
+            <!-- Focus Area Card -->
+            <div class="bento-item col-span-4" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-secondary);">✧</div>
+                <h3 style="font-size: 1.2rem;">AI Healthcare</h3>
+            </div>
+
+            <!-- Contact Box -->
+            <div class="bento-item col-span-4"
+                style="background: linear-gradient(135deg, rgba(0, 255, 204, 0.1) 0%, transparent 100%); display: flex; flex-direction: column; justify-content: center;">
+                <span
+                    style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;">STATUS:
+                    ONLINE</span>
+                <a href="mailto:sanjana@example.com" class="btn-tech" style="justify-content: center;">Transmit
+                    Signal</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer
+        style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-light); font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+        SYSTEM BUILD: v2.0 <br>
+        &copy; <span id="year"></span> Sanjana Nayar Process Executed.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
